@@ -5,15 +5,15 @@ let banderaUno=1;
 let banderaDos=0;
 let banderaTres=0;
 function arranca() {
-    document.getElementById("primeralinea").innerHTML = "==============================";
-    document.getElementById("segundalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|";
+    document.getElementById("primeralinea").innerHTML = "====================";
+    document.getElementById("segundalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~|";
     document.getElementById("terceralinea").innerHTML =jugaUno;
-    document.getElementById("cuartalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|";
+    document.getElementById("cuartalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~|";
     document.getElementById("quintalinea").innerHTML =jugaDos;
-    document.getElementById("sextalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|";
+    document.getElementById("sextalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~|";
     document.getElementById("septimalinea").innerHTML =jugaTres;
-    document.getElementById("octavalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|";
-    document.getElementById("novenalinea").innerHTML = "==============================";
+    document.getElementById("octavalinea").innerHTML = "|~~~~~~~~~~~~~~~~~~~|";
+    document.getElementById("novenalinea").innerHTML = "====================";
 }
 
 function jugadorUno() {
@@ -36,6 +36,12 @@ function jugadorUno() {
     }else{
         alert("No tiro el jugador anterior");
     }
+    if(jugaUno.length>=40){
+        alert("Jugador Uno a ganado el juego");
+        jugaUno='-';
+        jugaDos='-';
+        jugaTres='-';
+    }
 }
 function jugadorDos() {
     if(banderaDos===1) {
@@ -57,6 +63,12 @@ function jugadorDos() {
     }else{
         alert("No tiro el jugador anterior");
     }
+    if(jugaDos.length>=40){
+        alert("Jugador Dos a ganado el juego");
+        jugaUno='-';
+        jugaDos='-';
+        jugaTres='-';
+    }
 }
 function jugadorTres() {
     if(banderaTres===1) {
@@ -77,5 +89,11 @@ function jugadorTres() {
         arranca();
     }else{
         alert("No tiro el jugador anterior");
+    }
+    if(jugaTres.length>=40){
+        alert("Jugador Tres a ganado el juego");
+        jugaUno='-';
+        jugaDos='-';
+        jugaTres='-';
     }
 }

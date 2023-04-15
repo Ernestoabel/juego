@@ -17,34 +17,38 @@
     <meta charset="UTF-8">
     <title>Juego de pileta</title>
     <script src="JS.js"></script>
+    <link rel="stylesheet" href="Juego.css">
 
 </head>
 <body>
 <div class="container ">
     <div class="row">
         <div class="col-12 text-center">
+            <br><br>
             <h1>JUEGO DE PILETA</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-12 text-center">
             <br>
-            <button type="button" onclick="arranca()" class="btn btn-success">COMENZAR</button>
+            <button id="botonComenzar" type="button" onclick="arranca()" class="btn btn-success">COMENZAR</button>
             <br>
             <br>
             <br>
         </div>
     </div>
     <div class="row">
-        <div class="col-4 text-center">
-            <button type="button" onclick="jugadorUno()" class="btn btn-success">JugadorUno</button>
+        <div class="col-3 text-center"></div>
+        <div class="col-2 text-center">
+            <button id="boton" type="button" onclick="jugadorUno()" class="btn btn-success">JugadorUno</button>
         </div>
-        <div class="col-4 text-center">
-            <button type="button" onclick="jugadorDos()" class="btn btn-success">JugadorDos</button>
+        <div class="col-2 text-center">
+            <button id="boton" type="button" onclick="jugadorDos()" class="btn btn-success">JugadorDos</button>
         </div>
-        <div class="col-4 text-center">
-            <button type="button" onclick="jugadorTres()" class="btn btn-success">JugadorTres</button>
+        <div class="col-2 text-center">
+            <button id="boton" type="button" onclick="jugadorTres()" class="btn btn-success">JugadorTres</button>
         </div>
+        <div class="col-3 text-center"></div>
     </div>
     <div class="row">
         <div class="col-4 "></div>
